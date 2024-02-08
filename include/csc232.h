@@ -18,9 +18,9 @@
 #define TRUE 1
 #define EXECUTE_BLOCK FALSE
 
-#define FINISHED_PART_1 FALSE
-#define FINISHED_PART_2 FALSE
-#define FINISHED_PART_3 FALSE
+#define FINISHED_PART_1 TRUE
+#define FINISHED_PART_2 TRUE
+#define FINISHED_PART_3 TRUE
 
 #include <algorithm>
 #include <cassert>
@@ -104,6 +104,7 @@ Yorkie::Yorkie(const std::string& dogs_name) : name{ dogs_name }
 std::string Yorkie::speak() const
 {
     std::string response{ "DID YOU SAY SPEAK?" };
+    return response; 
 }
 
 void Yorkie::sit() const
@@ -114,21 +115,22 @@ void Yorkie::sit() const
 class GreatDaehn: public Dog
 {
 public:
-    GreatDaehn const std::string& dogs_name);
+    GreatDaehn(const std::string& dogs_name);
     std::string speak() const override;
     void sit() const override;
 private:
     std::string name;
 };
     // TODO: Task 2.b.2 - Add your GreatDaehn definition below (before the #endif)
-GreatDaehn::GreatDaehn const std::string& dogs_name) : name{ dogs_name }
+GreatDaehn::GreatDaehn(const std::string& dogs_name) : name{ dogs_name }
 {
     std::cout << "A GreatDaehn named " << name << " was just created." << std::endl;
 }
 
 std::string GreatDaehn::speak() const
 {
-    std::string response{ "DID YOU SAY SPEAK?" };
+    std::string response{ "What?" };
+    return response;
 }
 
 void GreatDaehn::sit() const
