@@ -40,6 +40,7 @@ int main()
 #if FINISHED_PART_3
     // TOGGLE the above macro to TRUE (in the include/csc232.h header file) to run this code
     // Call the demo method in the space below (but before the #else)
+    void demo();
     /* begin cut-me */
     demo();
     /* end cut-me */
